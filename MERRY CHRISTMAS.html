@@ -1,0 +1,190 @@
+ 
+<html>
+<head>
+<title>MERRY CHRISTMAS</title>
+<script>
+            function drawTextAlongArc(context, str, centerX, centerY, radius, angle){
+                context.save();
+                context.translate(centerX, centerY);
+                context.rotate(-1 * angle / 2);
+                context.rotate(-1 * (angle / str.length) / 2);
+                for (var n = 0; n < str.length; n++) {
+                    context.rotate(angle / str.length);
+                    context.save();
+                    context.translate(0, -1 * radius);
+                    var char = str[n];
+                    context.fillText(char, 0, 0);
+                    context.restore();
+                }
+                context.restore();
+            }
+             
+            window.onload = function(){
+                var canvas = document.getElementById("myCanvas");
+                var context = canvas.getContext("2d");
+                 
+                context.font = "20pt Arial";
+                context.textAlign = "center";
+                 
+                var centerX = canvas.width / 2;
+                var centerY = canvas.height - 30;
+                var angle = Math.PI * 0.8; // radians
+                var radius = 100;
+                drawTextAlongArc(context, "MERRY CHRISTMAS", centerX, centerY, radius, angle);
+            };
+        </script>
+<style>
+	body
+		{
+	background-color: #CCC;
+	background-image: url(../back.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:contain;
+		}
+	#div0{
+		margin-top:40px;
+		margin-left:440px;
+	}
+	#div1{
+		color:#FFF;
+		margin-top:5px;
+		margin-left:600px;
+		float: inherit;
+	}
+	#div2 {
+	margin-top: 55px;
+	margin-left: 500px;
+	font-size: 50px;
+	color: #FFF;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 24px;
+	}
+	#div3{
+	color: #FFF;
+	margin-left:50px;
+	font-size:18px;
+	
+	font-family: "Lucida Handwriting";
+	font-weight: bold;
+	text-align: justify;
+	}
+	#div4{
+		margin-left:550px;
+		
+	}
+	#div5 {
+	margin-left:15px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 23px;
+	font-style: normal;
+	font-family: Tahoma, Geneva, sans-serif;
+	}
+	#div6 {
+	margin-left:30px;
+	margin-top:110px;
+	color: #FFF;
+	font-size: 15px;
+	font-style: normal;
+	font-family: Verdana, Geneva, sans-serif;
+	}
+	.button {
+    background-color:Transparent;
+    border:solid;
+	border-color:#FFF;
+	border-width:thin;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+#div7
+	  {
+		  background-color: #CCC;
+		  color:#000;
+		  height:120px;
+		  width:500px;
+		  text-align:center;
+		  font-size:15px;
+	  }
+.fa {
+        padding: 5px;
+        font-size: 20px;
+        
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+		border:#000;
+		color:#FFF;
+		background-color:transparent;
+		border:solid;
+		border-color:#000;
+		border-width:thin;
+      }
+	  
+	  .fa:hover {
+	font-weight: bold;
+	font-size: 24px;
+	  }
+	  .fa-facebook 
+	  {
+		  background-color:transparent;
+        color:#000;
+      } 
+.fa-google {
+       background-color:transparent;
+        color:#000;
+
+      }
+	  .fa-pin {
+       background-color:transparent;
+        color:#000;
+
+      }
+	  .fa-twit {
+       background-color:transparent;
+        color:#000;
+
+      }
+</style>
+</head>
+<body>
+<section 
+		style="width:500px; height:650px; 
+		background-image:url(back.jpg); 
+  	  position:absolute; 
+  	  background-size:cover;
+    margin-left:400px;
+    border-radius:5px; color:#FFF;">
+    <center><img src="bells-icon.png"></center>
+    <canvas id="myCanvas" width="500" height="150"></canvas>
+<pre id="div3" style="font-size:18px; font-family: 'Lucida Handwriting';">                      Christmas
+<span style="font-size: 90px; font-family: Arial, Helvetica, sans-serif; font-style: normal;">   SALE</span>
+<span style="margin-left:50px;"><svg height="75" width="300"><polygon points="0,60,40,30,0,5,300,5,260,30 300,60" style="fill:green;stroke:purple;stroke-width:1 "/><text x="40" y="40" font-family="Verdana" font-size="12px" fill="white">50% OFF FOR ALL PRODUCTS </text></polygon>
+</svg></span>
+<span id="div5">ONLINE & STORE,<u>5 DAYS ONLY</u></span></pre>
+<pre id="div6">FREE SHIPPING & EXCHANGES WITH NO MINIMUM ORDERS
+                  Enter Code: <a href="" style=" color: #093;"><strong>CRISTMAS99</strong></a>
+                       <button class="button" style="color: #FFF; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 10px;">SHOP NOW</button></pre>
+<footer id="div7">
+ <a href="https://www.facebook.com/" class="fa fa-facebook">&nbsp;&nbsp;<b>f</b>&nbsp;&nbsp;</a>
+ <a href="https://plus.google.com/discover" class="fa fa-google"><b>g+</b></a>
+ <a href="https://www.twitter.com" class="fa fa-twit"><img src="twitter1600.png"/></a>
+ <a href="https://www.pinterest.com" class="fa fa-pin "><b><img src="pinterest-logo-icon-63868.png"/></b></a>
+ <pre>
+</pre>
+      <center>Copyright@2016-email Template, All rights reserved<br>
+      Un suscribed</center>
+      </footer>
+    </section>
+
+</body>
+</html>
